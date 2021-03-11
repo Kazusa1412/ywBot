@@ -16,3 +16,6 @@ gradle-app.setting
 # gradle/wrapper/gradle-wrapper.properties
 
 /config/device.json
+
+# 不知道啥玩意儿
+cache/*
