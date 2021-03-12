@@ -4,4 +4,7 @@ object Versions {
     const val jvmTarget = "1.8"
 
     const val mirai = "2.4.2"
+
+    const val snakeyaml = "1.26"
+    const val shadowJar = "6.1.0"
 }

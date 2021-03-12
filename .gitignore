@@ -16,6 +16,7 @@ gradle-app.setting
 # gradle/wrapper/gradle-wrapper.properties
 
 /config/device.json
+*/config/botConfig.yml
 
 # 不知道啥玩意儿
 cache/*
