@@ -39,7 +39,7 @@ kotlin {
          *  把大的 jar 包里面的 META-INF 删掉
          *  然后把小的文件夹的 META-INF 和 com 文件夹复制到大 jar 包内即可
          */
-        tasks.register("zz",ShadowJar::class){
+        tasks.register("ywJar",ShadowJar::class){
             dependsOn("jvmJar")
             configurations = mutableListOf(project.configurations.findByName("jvmRuntimeClasspath"))
 //            manifest {
