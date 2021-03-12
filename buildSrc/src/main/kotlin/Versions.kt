@@ -7,4 +7,6 @@ object Versions {
 
     const val snakeyaml = "1.26"
     const val shadowJar = "6.1.0"
+    const val retrofit = "2.9.0"
+    const val ktor = "1.5.0"
 }

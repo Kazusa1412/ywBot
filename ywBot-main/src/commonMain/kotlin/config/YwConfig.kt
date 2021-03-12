@@ -8,6 +8,9 @@ class YwConfig(private val helpMap: HashMap<String,Any>): Map<String,Any> by hel
     val basic: Map<String,Any>
         get() = get("basic") as Map<String, Any>
 
+    val setu: Map<String,Any>
+        get() = get("setu") as Map<String, Any>
+
     val qqNumber: Long
         get() = basic["qqNumber"].toString().toLong()
 
