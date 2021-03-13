@@ -4,6 +4,7 @@ import com.elouyi.pojo.SetuResponse
 import com.elouyi.util.utilLogger
 import io.ktor.client.*
 import io.ktor.client.call.*
+import io.ktor.client.engine.cio.*
 import io.ktor.client.features.*
 import io.ktor.client.features.json.*
 import io.ktor.client.request.*
@@ -16,7 +17,7 @@ import java.io.InputStream
 
 
 suspend fun request(url: String): HttpResponse {
-    val client = HttpClient()
+    val client = HttpClient(CIO)
 
     val res: HttpResponse = client.get(url) {
         //header("User-Agent","Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/53.0.2785.143 Safari/537.36")
@@ -27,7 +28,7 @@ suspend fun request(url: String): HttpResponse {
 }
 
 suspend inline fun <reified R> requestSer(url: String): R {
-    val client = HttpClient {
+    val client = HttpClient(CIO) {
         BrowserUserAgent()
 //        install(UserAgent) {
 //            agent = "User-Agent\",\"Mozilla/5.0 (Macintosh; Intel Mac OS X 10_11_6) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/53.0.2785.143 Safari/537.36"

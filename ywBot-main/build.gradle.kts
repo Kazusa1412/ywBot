@@ -84,6 +84,8 @@ kotlin {
             dependencies {
                 implementation("net.mamoe:mirai-core:${Versions.mirai}")
                 implementation("org.yaml:snakeyaml:${Versions.snakeyaml}")
+                implementation("io.ktor:ktor-client-core:${Versions.ktor}")
+                implementation("io.ktor:ktor-client-cio:${Versions.ktor}")
                 implementation("io.ktor:ktor-client-json:${Versions.ktor}")
                 implementation("io.ktor:ktor-client-gson:${Versions.ktor}")
                 //implementation("com.squareup.retrofit2:retrofit:${Versions.retrofit}")
