@@ -30,8 +30,8 @@ object SetuEventFilter : GroupEventFilter {
             logger.i("进入equals")
             groupMessageEvent.sendSetu()
         }
-        content.equals(ywConfig.setu["keywords"].toString()) {
-            groupMessageEvent.subject.sendMessage("该功能重构中，现在暂时可用 [会长来]$endl 想要更多功能？ 欢迎来提交pr $githubUrl")
+        content.equals(ywConfig.setu["r18Keyword"].toString()) {
+            groupMessageEvent.subject.sendMessage("该功能重构中，现在暂时可用 [会长来]$endl 想要更多功能？ 欢迎来提交pr$endl$githubUrl")
         }
     }
 }
