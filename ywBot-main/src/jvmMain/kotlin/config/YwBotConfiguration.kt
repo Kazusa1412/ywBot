@@ -36,6 +36,10 @@ object YwBotConfiguration {
             readLine()
             exitProcess(0)
         }
+        val imgPath = File(ywConfig.setu["imgPath"].toString())
+        if (!imgPath.exists()) {
+            imgPath.mkdir()
+        }
         logger.v("登录qq为 ${ywConfig.qqNumber} 开始登录")
     }
 

@@ -19,6 +19,11 @@ data class SetuResponse(
         var width: Int = 0,
         var height: Int = 0,
         var tags: MutableList<String> = mutableListOf()
-    )
+    ) {
+        val fileName: String
+            get() {
+                return url.slice(url.lastIndexOf("/") until url.length)
+            }
+    }
 
 }
