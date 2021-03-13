@@ -22,6 +22,8 @@ suspend fun main() = coroutineScope<Unit> {
         bot.login()
         YwBotApplication(bot).run()
     }
+
+    botJob.join()
 }
 
 class YwBotApplication(private val bot: Bot) {
