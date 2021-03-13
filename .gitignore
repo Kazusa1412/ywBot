@@ -24,3 +24,5 @@ gradle-app.setting
 # 不知道啥玩意儿
 cache/*
 */cache/*
+**/cache/**
+cache
