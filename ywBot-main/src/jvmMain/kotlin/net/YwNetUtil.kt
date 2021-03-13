@@ -1,6 +1,7 @@
 package com.elouyi.net
 
 import com.elouyi.pojo.SetuResponse
+import com.elouyi.util.utilLogger
 import io.ktor.client.*
 import io.ktor.client.call.*
 import io.ktor.client.features.*
@@ -41,9 +42,11 @@ suspend inline fun <reified R> requestSer(url: String): R {
 }
 
 suspend fun download(url: String,path: String): File {
-    val inputStream = request(url).receive<InputStream>()
+    utilLogger.i("开始下载 $url")
     val fileName = url.slice(url.lastIndexOf("/") until url.length)
     val file = File(if (path.endsWith("/")) path + fileName else "$path/$fileName")
+    if (file.exists()) return file
+    val inputStream = request(url).receive<InputStream>()
     val out = file.outputStream()
     withContext(Dispatchers.IO) {
         out.write(inputStream.readBytes())

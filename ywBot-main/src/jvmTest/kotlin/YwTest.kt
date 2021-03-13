@@ -6,17 +6,22 @@ import com.elouyi.util.ElyLogger
 import org.junit.Test
 
 class YwTest {
+
+    init {
+        YwBotConfiguration
+    }
+
     val logger = ElyLogger("test")
     @Test
     fun zz(){
 
         logger.e("zzz")
-        YwBotConfiguration
+
     }
 
     @Test
     fun config(){
-        YwBotConfiguration
+
         ywConfig.forEach { t, u ->
             println("t is $t and u is $u")
             println(u.javaClass)

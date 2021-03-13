@@ -13,9 +13,11 @@ suspend fun getSetu(keyword: String = "", r18: Int = 0): SetuResponse {
         val apiKey = apiKeys.shuffled()[0].toString()
         append("&apikey=${apiKey}")
     }
+    utilLogger.i("开始请求 $url")
     return try {
         requestSer(url)
     } catch (e: Exception) {
+        utilLogger.e("请求涩图失败")
         throw e
     }
 }
