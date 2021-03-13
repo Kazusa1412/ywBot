@@ -14,7 +14,7 @@ object YwBotConfiguration {
 
     private val configFile = File("$configDir/$configName")
 
-    private val logger = YwFactory.newBot("YwConfig")
+    private val logger = YwFactory.newLogger("YwConfig")
     
     init {
         val dir = File(configDir)

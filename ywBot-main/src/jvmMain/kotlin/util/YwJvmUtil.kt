@@ -2,7 +2,7 @@ package com.elouyi.util
 
 import java.security.MessageDigest
 
-actual val utilLogger = YwFactory.newBot("util")
+actual val utilLogger = YwFactory.newLogger("util")
 
 /**
  * 计算一个 [ByteArray] 的 md5 值，注意，返回类型是 [ByteArray]

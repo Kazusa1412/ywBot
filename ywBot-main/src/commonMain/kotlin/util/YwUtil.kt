@@ -14,3 +14,9 @@ inline fun String.startsWith(vararg prefixes: String,action: (String) -> Unit) {
         }
     }
 }
+
+inline fun String.equals(str: String,action: (String) -> Unit) {
+    if (this == str) {
+        action(this)
+    }
+}
