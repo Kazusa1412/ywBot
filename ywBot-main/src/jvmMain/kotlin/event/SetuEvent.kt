@@ -16,7 +16,11 @@ suspend fun GroupMessageEvent.sendSetu() {
     val setu = getSetu()
     val imgFile = downloadSetu(setu).uploadAsImage(subject)
     val msg = formatSetu(setu,imgFile)
-    subject.sendMessage(msg).recallIn(ywConfig.setu["recallTime"].toString().toLong() * 1000L)
+    try {
+        subject.sendMessage(msg).recallIn(ywConfig.setu["recallTime"].toString().toLong() * 1000L)
+    } catch (e: Exception) {
+        subject.sendMessage(e.message.toString())
+    }
 }
 
 object SetuEventFilter : GroupEventFilter {
