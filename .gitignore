@@ -25,4 +25,6 @@ gradle-app.setting
 cache/*
 */cache/*
 **/cache/**
-cache
+cache/session.bin
+*/cache/session.bin
+/cache/
